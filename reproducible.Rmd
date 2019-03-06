@@ -1,0 +1,68 @@
+---
+title: "Markdown basics"
+author: "Reinhard Simon"
+date: '2019-03-06'
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+bibliography: references.bib
+---
+
+# Introduction
+
+Markdown provides an easy way to write formatted text like
+
+- *italics*
+- **bold**
+- `code`
+- superscript^2^
+- H~2~O
+- SO~4~^2-^
+- [links](http://google.com)
+
+You can also use it for:
+
+- equations $E = mc^2$
+
+- and bibliographies [@darwin2004origin]
+
+# Results
+
+```{r echo=FALSE}
+knitr::kable(summary(cars))
+```
+
+```{r echo=FALSE}
+plot(cars$speed, cars$dust, type = "l", lwd = "2", col = "orange")
+```
+
+```{r}
+data("iris")
+# todo: insert a summary table
+
+iris
+```
+
+```{r}
+# todo 2: plot
+
+plot(iris$Sepal.Length, iris$Sepal.Width, "h", main = "Iris plot", xlab = "Sepal Length", ylab = "Sepal Width")
+
+# todo 3: use inline R
+
+```
+
+The number of records in the database is `r nrow(cars)`.
+
+# Session Information
+
+```{r}
+sessionInfo()
+```
+
+
+# References
+
+
+
